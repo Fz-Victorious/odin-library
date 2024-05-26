@@ -149,9 +149,9 @@ dialog::backdrop {
     backdrop-filter: blur(5px);
 }
 
- form{
+/*  form{
     backdrop-filter: blur(2px);
- }
+ } */
 
  .form-title{
     color:#E49BFF;
