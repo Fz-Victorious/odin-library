@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color:white;
+    background-color: rgb(234, 225, 225);
+    height: 100vh;
+}
+
+
+header{
+    background-color: #850F8D;
+    padding: 1.3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    color: white;
+    gap:5px;
+}
+button{
+    background-color: #F8F9D7;
+    border: none;
+    outline: none;
+    padding: 0.6em 1em;
+    margin-right: 2%;
+    border-radius: 8px;
+    color: #1b021d;
+    font-weight: 600;
+}
+.mylib{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+/******************* main ********************/
+
+main{
+    display: flex;
+}
+
+.lib-imag{
+    width:30%;
+    height: 100vh;
+    position: sticky;
+    top:0;
+    background-image:url("./images/biblio.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.book{
+    width:calc(100% - 30%);
+    padding: 10% 3%;
+    display: grid;
+    grid-template: repeat(3, minmax(200px, 1fr)) / 
+            repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(200px, 1fr);
+    gap: 2rem;
+    overflow: auto;
+}
+
+.card{
+    background-color: #E49BFF;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px black;
+    color: #3c3c3c;
+    display: flex;
+    gap:2rem;
+}
+
+.image{
+    width:40%;
+    background-image: url("./images/book1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.card-buttons{
+    display: flex;
+    justify-content: space-between;
+
+}
+.card-btn{
+    background-color: #F8F9D7;
+    width: 8em;
+    text-align: center;
+    font-size: 12px;
+}
+.remove-btn{
+    border: 2px solid red;
+}
+
+.title{
+    font-size: 35px;
+    color:#3b444b;
+    font-style: italic;
+}
+.author{
+    color:#414a4c;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+/****************** styling form *********************/
+
+dialog{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 4rem;
+    width:50%;
+    background-image: url("./images/book.jpg");
+    background-size: cover;
+    background-position: left;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color:white;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(5px);
+}
+
+ form{
+    backdrop-filter: blur(2px);
+ }
+
+ .form-title{
+    color:#E49BFF;
+    padding-bottom: 1rem;
+    font-size: 40px;
+ }
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+    gap:5px;
+    margin-bottom: 8px;
+}
+
+label{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+input{
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #F8F9D7;
+    color: black;
+}
+
+.form-btns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-btn{
+    background-color: #E49BFF;
+}
+
+.error{
+    color:red;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.check{
+    display: flex;
+    accent-color: #E49BFF;
+    gap:10px;
+}
+
+
